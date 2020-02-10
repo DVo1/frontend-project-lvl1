@@ -1,16 +1,11 @@
 name: Test-Lint-CI
 
-on: 
-  push:
-    branches: 
-      - master
+on: [push]
 
 jobs:
-  linter_testing:
+  linter:
+    runs-on: [ubuntu-latest]
     
-      runs-on: 
-        ubuntu-latest
-    
-      steps:
-      - name: ==== Run eslint testing! ====
-        run: make lint
+    steps:
+       - name: Rinnig linter
+         run: make lint
