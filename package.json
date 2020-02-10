@@ -1,7 +1,7 @@
 {
   "name": "brain-games",
   "version": "0.3.0",
-  "description": "",
+  "description": "![Test-Lint-CI](https://github.com/DVo1/frontend-project-lvl1/workflows/Test-Lint-CI/badge.svg?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/5251a0fee24f420dfe9b/maintainability)](https://codeclimate.com/github/DVo1/frontend-project-lvl1/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)",
   "main": "src/index.js",
   "type": "module",
   "bin": {
@@ -35,5 +35,6 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.20.1"
-  }
+  },
+  "keywords": []
 }
