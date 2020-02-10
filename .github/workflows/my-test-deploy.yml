@@ -1,0 +1,17 @@
+name: Test-Lint-CI
+
+on: 
+  push:
+    branches: 
+      - master
+
+jobs:
+  linter_testing:
+    
+    runs-on: 
+      ubuntu-latest
+    
+    steps:
+    - name: Run eslint testing!
+      run: |
+          make lint
