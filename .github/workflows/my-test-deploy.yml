@@ -9,9 +9,8 @@ jobs:
   linter_testing:
     
     runs-on: 
-      ubuntu-latest
+      macos
     
     steps:
     - name: Run eslint testing!
-      run: |
-          make lint
+      run: make lint
