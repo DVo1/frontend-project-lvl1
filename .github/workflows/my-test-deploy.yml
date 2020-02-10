@@ -8,9 +8,10 @@ on:
 jobs:
   linter_testing:
     
-    runs-on: 
-      macos
+      runs-on: 
+        ubuntu-latest
     
-    steps:
-    - name: Run eslint testing!
-      run: make lint
+      steps:
+      - name: ==== Run eslint testing! ====
+        run: |
+          make lint
