@@ -8,4 +8,4 @@ jobs:
     
     steps:
        - name: Runnig linter
-         run: make lint
+         run: npx eslint .
