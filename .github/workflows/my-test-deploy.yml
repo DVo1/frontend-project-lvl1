@@ -13,5 +13,4 @@ jobs:
     
       steps:
       - name: ==== Run eslint testing! ====
-        run: |
-          make lint
+      - run: make lint
