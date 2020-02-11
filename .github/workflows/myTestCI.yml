@@ -1,11 +1,10 @@
-name: Node CI
+name: My-Test-CI
 
 on:
   - push
-  - pull_request
 
 jobs:
-  build:
+  run_linter:
 
     runs-on: ubuntu-latest
 
@@ -15,11 +14,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Run Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build, and test
+      - name: install npm packeges
         run: |
           make install
         env:
