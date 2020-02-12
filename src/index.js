@@ -2,34 +2,30 @@ import readlineSync from 'readline-sync';
 
 
 export const name = readlineSync.question('May I have your name? ');
+export const win = `Congratulations, ${name}!`;
 
 export const printTitle = (str) => {
   console.log('Welcome to the Brain Games!');
   console.log(`Hello, ${str}`);
 };
 
-export const win = `Congratulations, ${name}!`;
-
 export const evenGames = () => {
   const getRandomNum = () => Math.floor(Math.random() * 100);
   const isEven = (num) => num % 2 === 0;
-
-  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const type = readlineSync.question('You answer: ');
 
   let num = getRandomNum();
   let round = 3;
   let score = 0;
 
-  console.log(printTitle(name));
-  console.log(rule);
+  printTitle(name);
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   while (round !== 0) {
-    const answ = isEven(num) ? 'yes' : 'no';
-    const wrong = `"${type}" is wrong answer ;(. Correct answer was "${answ}".`;
-    const qst = `Question: ${num}`;
     num = getRandomNum();
-    console.log(qst);
+    console.log(`Question: ${num}`);
+    const answ = isEven(num) ? 'yes' : 'no';
+    const type = readlineSync.question('You answer: ');
+    const wrong = `"${type}" is wrong answer ;(. Correct answer was "${answ}".`;
     if (type === answ) {
       round -= 1;
       score += 1;
@@ -41,5 +37,3 @@ export const evenGames = () => {
   }
   if (score === 3) console.log(win);
 };
-
-evenGames();
