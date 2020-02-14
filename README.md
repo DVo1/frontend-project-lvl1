@@ -4,4 +4,8 @@
 
 # frontend-project-lvl1
 
+## Brain Even 
 [![asciicast](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe.png)](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe)
+
+## Brain Calc
+[![asciicast](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0.png)](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0)
