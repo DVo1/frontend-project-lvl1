@@ -1,6 +1,7 @@
 
 import readlineSync from 'readline-sync';
 
+
 const gameEngine = (data) => {
   let round = 0;
   console.log('Welcome to the Brain Games!');
@@ -9,8 +10,6 @@ const gameEngine = (data) => {
   const win = `Congratulations, ${name}!`;
   const wrong = (num, answr) => `"${num}" is wrong answer ;(. Correct answer was "${answr}".`;
   console.log(`Hello, ${name}`);
-
-
   do {
     const [qst, answ] = data();
     console.log(`Question: ${qst}`);

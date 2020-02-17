@@ -5,10 +5,14 @@
 # frontend-project-lvl1
 
 ## Brain Even 
-[![asciicast](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe.png)](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe)
+[![asciicast](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe.png)](https://asciinema.org/a/IV2CMfMrAte97zypDUwSe0eLe) 
 
 ## Brain Calc
 [![asciicast](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0.png)](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0)
 
 ## Brain NOD
 [![asciicast](https://asciinema.org/a/JaIamdkdHp1wVvejeZm12KlEd.png)](https://asciinema.org/a/JaIamdkdHp1wVvejeZm12KlEd)
+
+## Brain Progression
+[![asciicast](https://asciinema.org/a/CxCWhYyfpVwbt2lfybUrhxygi.png)](https://asciinema.org/a/CxCWhYyfpVwbt2lfybUrhxygi)
+

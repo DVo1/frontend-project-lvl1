@@ -4,6 +4,7 @@ import gameEngine from '../index.js';
 const rule = 'Find the greatest common divisor of given numbers.';
 
 const getQstAnsw = () => {
+  console.log(rule);
   const x = getRandomNum();
   const y = getRandomNum();
   const qst = `${x} ${y}`;
@@ -11,5 +12,5 @@ const getQstAnsw = () => {
   return [qst, answ];
 };
 
-console.log(rule);
+
 export default gameEngine(getQstAnsw);
