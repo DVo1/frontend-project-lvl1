@@ -9,3 +9,6 @@
 
 ## Brain Calc
 [![asciicast](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0.png)](https://asciinema.org/a/6pHXlHYRm85rkaXv7CZ1fFqv0)
+
+## Brain NOD
+[![asciicast](https://asciinema.org/a/JaIamdkdHp1wVvejeZm12KlEd.png)](https://asciinema.org/a/JaIamdkdHp1wVvejeZm12KlEd)
