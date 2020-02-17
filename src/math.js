@@ -1,5 +1,7 @@
 export const isEven = (num) => num % 2 === 0;
 
+export const nod = (x, y) => (!y ? x : nod(y, x % y));
+
 export const getRandomSign = () => {
   const arrSign = ['+', '-', '*'];
   const randomSing = arrSign[Math.floor(Math.random() * arrSign.length)];
