@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import nodGame from '../src/games/nod.js';
+import nodGame from '../src/games/gcd.js';

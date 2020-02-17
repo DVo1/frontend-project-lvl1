@@ -1,14 +1,13 @@
 
-import { getArifmetics } from '../math.js';
+import { getArithmeticExpression } from '../math.js';
 import gameEngine from '../index.js';
 
 const rule = 'What is the result of the expression?';
 
-const getQstAnsw = () => {
-  console.log(rule);
-  const [qst, answ] = getArifmetics();
-  return [qst, answ];
+const getGameData = () => {
+  const [question, answer] = getArithmeticExpression();
+  return [rule, question, answer];
 };
 
-
-export default gameEngine(getQstAnsw);
+const game = () => gameEngine(getGameData);
+export default game;

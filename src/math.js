@@ -6,14 +6,13 @@ export const isPrime = (num) => {
   return num > 1;
 };
 
-export const nod = (x, y) => (!y ? x : nod(y, x % y));
+export const gcd = (x, y) => (!y ? x : gcd(y, x % y));
 export const getRandomNum = () => Math.floor(Math.random() * 100);
 
-export const getArifmetics = () => { // TODO: Refactor this method
+export const getArithmeticExpression = () => {
   const getRandomSign = () => {
     const sings = ['+', '-', '*'];
-    const randomSing = sings[Math.floor(Math.random() * sings.length)];
-    return randomSing;
+    return sings[Math.floor(Math.random() * sings.length)];
   };
   const getAnswer = (sing, a, b) => {
     switch (sing) {
@@ -31,17 +30,17 @@ export const getArifmetics = () => { // TODO: Refactor this method
   return [displayQuestion, answer];
 };
 
-export const getProgression = (start, step, n, rnd) => {
+export const getProgression = (begin, step, length, rnd) => {
   let answer = '';
   let result = '';
-  let curr = start;
-  for (let i = 0; i < n; i += 1) {
-    curr += step;
+  let currentValue = begin;
+  for (let i = 0; i < length; i += 1) {
+    currentValue += step;
     if (i === rnd) {
       result += '.. ';
-      answer += curr;
+      answer += currentValue;
     } else {
-      result += `${curr} `;
+      result += `${currentValue} `;
     }
   }
   return [result, answer];
