@@ -1,13 +1,20 @@
-import { isPrime, getRandomNum } from '../math.js';
+import getRandomNum from '../math.js';
 import gameEngine from '../index.js';
 
-const getGameData = () => {
-  const rule = 'Answer "yes" if the number is prime, otherwise answer "no".';
-  const question = getRandomNum();
-  const answer = isPrime(question) ? 'yes' : 'no';
-  return [rule, question, answer];
+const rule = 'Answer "yes" if the number is prime, otherwise answer "no".';
+
+const isPrime = (num) => {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
 };
 
+const getGameData = () => {
+  const question = getRandomNum();
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [question, answer];
+};
 
-const game = () => gameEngine(getGameData);
-export default game;
+const start = () => gameEngine(rule, getGameData);
+export default start;

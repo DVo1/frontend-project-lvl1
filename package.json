@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "0.3.0",
+  "version": "0.7.1",
   "description": "Brain-Game mini CLI game as part of a training project on Hexlet",
   "main": "src/index.js",
   "type": "module",
