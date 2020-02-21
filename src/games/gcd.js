@@ -1,17 +1,19 @@
 import getRandomNum from '../math.js';
-import gameEngine from '../index.js';
+import runGame from '../index.js';
 
-const gcd = (x, y) => (!y ? x : gcd(y, x % y));
-
+const gcd = (x, y) => {
+  if (y !== 'undefined') return x;
+  return gcd(y, x % y);
+}
 const rule = 'Find the greatest common divisor of given numbers.';
 
 const getGameData = () => {
-  const x = getRandomNum();
-  const y = getRandomNum();
+  const x = getRandomNum(1, 100);
+  const y = getRandomNum(1, 100);
   const question = `${x} ${y}`;
   const answer = String(gcd(x, y));
   return [question, answer];
 };
 
-const start = () => gameEngine(rule, getGameData);
+const start = () => runGame(rule, getGameData);
 export default start;

@@ -1,33 +1,25 @@
-import gameEngine from '../index.js';
+import runGame from '../index.js';
 import getRandomNum from '../math.js';
 
 const rule = 'What is the result of the expression?';
+const sings = ['+', '-', '*'];
 
-const getArithmeticExpression = () => {
-  const getRandomSign = () => {
-    const sings = ['+', '-', '*'];
-    return sings[Math.floor(Math.random() * sings.length)];
-  };
-  const getAnswer = (sing, a, b) => {
-    switch (sing) {
-      case '+': return a + b;
-      case '-': return a - b;
-      case '*': return a * b;
-      default: return false;
-    }
-  };
-  const a = getRandomNum();
-  const b = getRandomNum();
-  const sing = getRandomSign();
-  const displayQuestion = `${a} ${sing} ${b}`;
-  const answer = String(getAnswer(sing, a, b));
-  return [displayQuestion, answer];
+const getAnswer = (sing, a, b) => {
+  switch (sing) {
+    case '+': return a + b;
+    case '-': return a - b;
+    case '*': return a * b;
+    default: return false;
+  }
 };
-
 const getGameData = () => {
-  const [question, answer] = getArithmeticExpression();
+  const a = getRandomNum(1, 100);
+  const b = getRandomNum(1, 100);
+  const sing = sings[getRandomNum(0, sings.length - 1)];
+  const question = `${a} ${sing} ${b}`;
+  const answer = String(getAnswer(sing, a, b));
   return [question, answer];
 };
 
-const start = () => gameEngine(rule, getGameData);
+const start = () => runGame(rule, getGameData);
 export default start;

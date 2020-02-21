@@ -1,5 +1,5 @@
 import getRandomNum from '../math.js';
-import gameEngine from '../index.js';
+import runGame from '../index.js';
 
 const rule = 'What number is missing in the progression?';
 
@@ -21,12 +21,12 @@ const getProgression = (begin, step, length, rnd) => {
 
 const getGameData = () => {
   const lengthProgression = 10;
-  const randomNum = Math.floor(getRandomNum() / 10);
-  const beginNum = getRandomNum();
-  const stepOfNum = getRandomNum();
+  const randomNum = getRandomNum(1, 10);
+  const beginNum = getRandomNum(1, 100);
+  const stepOfNum = getRandomNum(1, 100);
   const [question, answer] = getProgression(beginNum, stepOfNum, lengthProgression, randomNum);
   return [question, answer];
 };
 
-const start = () => gameEngine(rule, getGameData);
+const start = () => runGame(rule, getGameData);
 export default start;
