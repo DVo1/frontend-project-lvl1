@@ -1,8 +1,8 @@
 import runGame from '../index.js';
 import getRandomNum from '../math.js';
 
-const rule = 'What is the result of the expression?';
-const sings = ['+', '-', '*'];
+const description = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
 const getAnswer = (sing, a, b) => {
   switch (sing) {
@@ -15,11 +15,11 @@ const getAnswer = (sing, a, b) => {
 const getGameData = () => {
   const a = getRandomNum(1, 100);
   const b = getRandomNum(1, 100);
-  const sing = sings[getRandomNum(0, sings.length - 1)];
-  const question = `${a} ${sing} ${b}`;
-  const answer = String(getAnswer(sing, a, b));
+  const operator = operators[getRandomNum(0, operators.length - 1)];
+  const question = `${a} ${operator} ${b}`;
+  const answer = String(getAnswer(operator, a, b));
   return [question, answer];
 };
 
-const start = () => runGame(rule, getGameData);
+const start = () => runGame(description, getGameData);
 export default start;

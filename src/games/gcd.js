@@ -2,10 +2,10 @@ import getRandomNum from '../math.js';
 import runGame from '../index.js';
 
 const gcd = (x, y) => {
-  if (y !== 'undefined') return x;
+  if (y !== 0) return x;
   return gcd(y, x % y);
-}
-const rule = 'Find the greatest common divisor of given numbers.';
+};
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGameData = () => {
   const x = getRandomNum(1, 100);
@@ -15,5 +15,5 @@ const getGameData = () => {
   return [question, answer];
 };
 
-const start = () => runGame(rule, getGameData);
+const start = () => runGame(description, getGameData);
 export default start;

@@ -1,17 +1,19 @@
 import getRandomNum from '../math.js';
 import runGame from '../index.js';
 
-const rule = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
+const lengthProgression = 10;
 
-const getProgression = (begin, step, length, rnd) => {
+
+const getProgression = (beginNum, stepOfNum, progressionLength, randomNum) => {
   let answer = '';
   let result = '';
-  let currentValue = begin;
-  for (let i = 0; i < length; i += 1) {
-    currentValue += step;
-    if (i === rnd) {
-      result += '.. ';
-      answer += currentValue;
+  let currentValue = beginNum;
+  for (let i = 0; i < progressionLength; i += 1) {
+    currentValue += stepOfNum;
+    if (i === randomNum) {
+      result += `${'.. '}`;
+      answer += `${+result[0] + i * stepOfNum}`;
     } else {
       result += `${currentValue} `;
     }
@@ -20,7 +22,6 @@ const getProgression = (begin, step, length, rnd) => {
 };
 
 const getGameData = () => {
-  const lengthProgression = 10;
   const randomNum = getRandomNum(1, 10);
   const beginNum = getRandomNum(1, 100);
   const stepOfNum = getRandomNum(1, 100);
@@ -28,5 +29,5 @@ const getGameData = () => {
   return [question, answer];
 };
 
-const start = () => runGame(rule, getGameData);
+const start = () => runGame(description, getGameData);
 export default start;
