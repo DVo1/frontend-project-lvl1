@@ -13,7 +13,7 @@ const getProgression = (beginNum, stepOfNum, progressionLength, randomNum) => {
     currentValue += stepOfNum;
     if (i === randomNum) {
       result += `${'.. '}`;
-      answer += `${+result[0] + i * stepOfNum}`;
+      answer += `${+result.substr(0, 2) + i * stepOfNum}`;
     } else {
       result += `${currentValue} `;
     }

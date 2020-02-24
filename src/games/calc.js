@@ -4,8 +4,8 @@ import getRandomNum from '../math.js';
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-const getAnswer = (sing, a, b) => {
-  switch (sing) {
+const getAnswer = (operator, a, b) => {
+  switch (operator) {
     case '+': return a + b;
     case '-': return a - b;
     case '*': return a * b;
