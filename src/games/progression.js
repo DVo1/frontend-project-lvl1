@@ -12,10 +12,11 @@ const getProgression = (beginNum, stepOfNum, progressionLength, randomNum) => {
   for (let i = 0; i < progressionLength; i += 1) {
     currentValue += stepOfNum;
     if (i === randomNum) {
-      result += `${'.. '}`;
-      answer += `${+result.substr(0, 2) + i * stepOfNum}`;
+      result = `${result} ${'..'}`;
+      answer = `${+result.substr(0, 3) + i * stepOfNum}`;
+      console.log(answer);
     } else {
-      result += `${currentValue} `;
+      result = `${result} ${currentValue}`;
     }
   }
   return [result, answer];
