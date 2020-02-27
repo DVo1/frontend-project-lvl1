@@ -1,4 +1,4 @@
-![My-Test-CI](https://github.com/voitd/frontend-project-lvl1/workflows/My-Test-CI/badge.svg?branch=master)
+[![Brain-Games-CI](https://github.com/voitd/frontend-project-lvl1/actions/)](https://github.com/voitd/frontend-project-lvl1/workflows/Brain-Games-CI/badge.svg?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5251a0fee24f420dfe9b/maintainability)](https://codeclimate.com/github/DVo1/frontend-project-lvl1/maintainability)
 
 # frontend-project-lvl1
