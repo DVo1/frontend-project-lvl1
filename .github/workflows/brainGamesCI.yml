@@ -1,4 +1,4 @@
-name: My-Test-CI
+name: Brain-Games-CI
 
 on:
   - push
