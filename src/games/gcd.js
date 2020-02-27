@@ -2,7 +2,7 @@ import getRandomNum from '../math.js';
 import runGame from '../index.js';
 
 const gcd = (x, y) => {
-  if (y !== 0) return x;
+  if (y === 0) return x;
   return gcd(y, x % y);
 };
 const description = 'Find the greatest common divisor of given numbers.';
