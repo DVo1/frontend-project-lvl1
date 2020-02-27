@@ -1,4 +1,4 @@
-[![Brain-Games-CI](https://github.com/voitd/frontend-project-lvl1/workflows/Brain-Games-CI/badge.svg)(https://github.com/voitd/frontend-project-lvl1/actions)]
+[![Actions Status](https://github.com/voitd/frontend-project-lvl1/workflows/Brain-Games-CI/badge.svg)](https://github.com/voitd/frontend-project-lvl1/actions?query=workflow%3A"Brain-Games-CI")
 [![Maintainability](https://api.codeclimate.com/v1/badges/5251a0fee24f420dfe9b/maintainability)](https://codeclimate.com/github/DVo1/frontend-project-lvl1/maintainability)
 
 # frontend-project-lvl1
@@ -17,3 +17,6 @@
 
 ## Brain Prime
 [![asciicast](https://asciinema.org/a/CPZb4zMUnSu8CJiDbmnm8iJQR.svg)](https://asciinema.org/a/CPZb4zMUnSu8CJiDbmnm8iJQR)
+
+
+![Brain-Games-CI](https://github.com/voitd/frontend-project-lvl1/workflows/Brain-Games-CI/badge.svg)
