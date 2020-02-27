@@ -1,4 +1,2 @@
 #!/usr/bin/env node
-import start from '../src/games/game.js';
-
-start();
+import '../src/games/game.js';

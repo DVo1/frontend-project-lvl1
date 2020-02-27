@@ -5,28 +5,22 @@ const description = 'What number is missing in the progression?';
 const lengthProgression = 10;
 
 
-const getProgression = (beginNum, stepOfNum, progressionLength, randomNum) => {
-  let answer = '';
+const getQueastion = (firstMember, difference, progressionLength, indexHiddeMember) => {
   let result = '';
-  let currentValue = beginNum;
   for (let i = 0; i < progressionLength; i += 1) {
-    const firstNum = beginNum + stepOfNum;
-    currentValue += stepOfNum;
-    if (i === randomNum) {
-      result = `${result} ${'..'}`;
-      answer = `${firstNum + i * stepOfNum}`;
-    } else {
-      result = `${result} ${currentValue}`;
-    }
+    let currentValue = firstMember + i * difference;
+    if (i === indexHiddeMember) currentValue = '..';
+    result = `${result} ${currentValue}`;
   }
-  return [result, answer];
+  return result;
 };
 
 const getGameData = () => {
-  const randomNum = getRandomNum(1, 10);
-  const beginNum = getRandomNum(1, 100);
-  const stepOfNum = getRandomNum(1, 100);
-  const [question, answer] = getProgression(beginNum, stepOfNum, lengthProgression, randomNum);
+  const indexHiddeMember = getRandomNum(1, 10);
+  const firstMember = getRandomNum(1, 100);
+  const difference = getRandomNum(1, 100);
+  const question = getQueastion(firstMember, difference, lengthProgression, indexHiddeMember);
+  const answer = String(firstMember + indexHiddeMember * difference);
   return [question, answer];
 };
 
