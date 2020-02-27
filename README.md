@@ -17,6 +17,3 @@
 
 ## Brain Prime
 [![asciicast](https://asciinema.org/a/CPZb4zMUnSu8CJiDbmnm8iJQR.svg)](https://asciinema.org/a/CPZb4zMUnSu8CJiDbmnm8iJQR)
-
-
-![Brain-Games-CI](https://github.com/voitd/frontend-project-lvl1/workflows/Brain-Games-CI/badge.svg)
