@@ -6,4 +6,4 @@ const runGame = () => {
   console.log(`Hello, ${name}`);
 };
 
-export default runGame();
+export default runGame;

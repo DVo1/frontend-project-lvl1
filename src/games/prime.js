@@ -11,9 +11,9 @@ const isPrime = (num) => {
 };
 
 const getGameData = () => {
-  const question = String(getRandomNum(1, 100));
+  const question = getRandomNum(1, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
-  return [question, answer];
+  return [question.toString(), answer];
 };
 
 const start = () => runGame(description, getGameData);

@@ -4,7 +4,7 @@ import getRandomNum from '../math.js';
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-const getAnswer = (operator, a, b) => {
+const calculate = (operator, a, b) => {
   switch (operator) {
     case '+': return a + b;
     case '-': return a - b;
@@ -17,7 +17,7 @@ const getGameData = () => {
   const b = getRandomNum(1, 100);
   const operator = operators[getRandomNum(0, operators.length - 1)];
   const question = `${a} ${operator} ${b}`;
-  const answer = String(getAnswer(operator, a, b));
+  const answer = String(calculate(operator, a, b));
   return [question, answer];
 };
 

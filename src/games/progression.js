@@ -6,22 +6,22 @@ const lengthProgression = 10;
 
 
 const getQueastion = (firstMember, difference, progressionLength, indexHiddeMember) => {
-  let result = '';
+  let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    let currentValue = firstMember + i * difference;
-    if (i === indexHiddeMember) currentValue = '..';
-    result = `${result} ${currentValue}`;
+    let currentMember = firstMember + i * difference;
+    if (i === indexHiddeMember) currentMember = '..';
+    question = `${question} ${currentMember}`;
   }
-  return result;
+  return question;
 };
 
 const getGameData = () => {
-  const indexHiddeMember = getRandomNum(1, 10);
+  const indexHiddeMember = getRandomNum(0, lengthProgression - 1);
   const firstMember = getRandomNum(1, 100);
   const difference = getRandomNum(1, 100);
   const question = getQueastion(firstMember, difference, lengthProgression, indexHiddeMember);
   const answer = String(firstMember + indexHiddeMember * difference);
-  return [question, answer];
+  return [question.trim(), answer];
 };
 
 const start = () => runGame(description, getGameData);
